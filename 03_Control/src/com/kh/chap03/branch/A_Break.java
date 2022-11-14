@@ -70,6 +70,40 @@ public class A_Break {
 		
 	}
 	
+	public void method4() {
+		// 매번 반복적으로 사용자에게 양수를 입력받아 1 ~ 사용자가 입력한수까지 합산하여 출력
+		// 단, 정상적으로 양수를 입력했을시 1 ~ 사용자가 입력한수까지 출력을하고 종료
+		
+		Scanner sc = new Scanner(System.in);
+		
+		while(true) {
+			System.out.print("양수 입력 : ");
+			int num = sc.nextInt();
+			
+			int sum = 0;
+			if(num > 0) {
+				for(int i = 1; i <= num; i++) {
+					sum += i;
+				}
+				System.out.printf("1부터 %d까지의 총 합계 : %d", num, sum);
+				break;
+			}
+		
+		}
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
 	
 	
 	

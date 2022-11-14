@@ -416,16 +416,36 @@ public class LoopPractice {
 		
 		System.out.print("정수 입력 : ");
 		int num = sc.nextInt();
-		
-		for(int i = 0; i<num; i++) {
-			for( int j= 0; j < 1+i; j++) {
-				System.out.print(" ");
+		for(int i =0; i<num; i++) {
+			//  *
+			for(int j =0; j < num - (1 + i); j++) { // 0 1
+				System.out.print(" "); //  ;
 			}
-			for(int j = 0; j< (num - i) * 2 -3; j++) {
-				System.out.print("*");
+			for(int j = 0; j < 1 + 2 * i; j++) {// 0
+				System.out.print("*");// *
 			}
 			System.out.println();
 		}
+		//3 2
+		//4 3
+		//5 4
+		for(int i = 0; i<num-1; i++) { // 0 1 2 ...
+			// ***
+			for(int j =0; j < 1+i; j++) { // 0
+				System.out.print(" "); // ;
+			}
+			for(int j = 0; j < (num - i) * 2 - 3 ; j++) {
+				// 1 + 2 * (num - 2 - i) -> 1 -> 0
+				// 1 + 2num -4 -2i ->  2(num-i) -3
+				System.out.print("*");// *****
+			}
+			System.out.println();
+		}
+		
+	}
+
+}
+		
 //		//  *
 //		for(int j = 0; j < 2; j++) {
 //			System.out.print(" ");
@@ -470,30 +490,4 @@ public class LoopPractice {
 //		System.out.println();
 //		}
 		
-		
-//		for(int i = 0; )
-//			
-//			for(int j=0; j<1+i; j++) {
-//				System.out.print(" ");
-//			}
-//		for(int j= 0; j< (num - i) *2-3; j++) {
-//			System.out.println("*");
-//		}
-//		System.out.println();
-//	}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	}
-	
-	
-	
-	
-	
-}
+

@@ -36,7 +36,7 @@ public class Run {
 		//lp.practice11();
 		//lp.practice12();
 		//lp.practice14();
-		//lp.practice18();
+		lp.practice18();
 		
 		
 	B_While bw = new B_While();
