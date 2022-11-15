@@ -15,7 +15,7 @@ public class Run {
 		B_Continue bc = new B_Continue();
 		//bc.method1();
 		//bc.method2();
-		bc.method3();
+		//bc.method3();
 	}
 
 }
