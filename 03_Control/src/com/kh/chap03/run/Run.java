@@ -9,8 +9,13 @@ public class Run {
 		//ab.method1();
 		//ab.method2();
 		//ab.method3();
-		ab.method4();
+		//ab.method4();
 		
+		
+		B_Continue bc = new B_Continue();
+		//bc.method1();
+		//bc.method2();
+		bc.method3();
 	}
 
 }
