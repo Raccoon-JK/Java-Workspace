@@ -83,12 +83,24 @@ public class ArrayPractice {
 		 
 		 for(int i = 0; i < arr.length; i++) {
 			 arr[i] = str.charAt(i);
-			 if(arr[i] == ch) {
-				 System.out.println(i); 
-				 
-			 }
 			 
+			 }
+		 
+		 int count = 0;
+		 String index = ""; // 4 8
+		 
+		 //3. 검색할 문자가 문자열에 몇 개 있는지, 어느 인덱스에 있는지
+		 for(int i = 0; i < arr.length; i++) {
+			 if(arr[i] == ch) {
+				 //갯수증가
+				 index += i+" ";
+				 count++;
+			 }
 		 }
+		
+		 //4.출력문 출력
+		 System.out.printf("%s에 %c가 존재하는 위치(인덱스) : %s \n", str, ch, index);
+		 System.out.printf("%c 개수 : %d", ch, count);
 		 
 		 
 		 
@@ -151,6 +163,20 @@ public class ArrayPractice {
 		 System.out.println();
 		 System.out.print("총 합 : "+sum);
 		 
+		 
+		 //선생님 풀이
+//		 int[] arr = new int[num];
+//		 for(int i = 0; i < arr.length; i++) {
+//			 System.out.printf("배열 %d번째 인덱스에 넣을 값 : ",i);
+//			 arr[i] = sc.nextInt();
+//		 }		 
+//		 int sum = 0;
+//		 for(int i = 0; i < arr.length; i++) {
+//			 sum += arr[i];
+//			 System.out.print(arr[i]+" ");
+//		 }
+//		 System.out.println("\n 총 합 : "+sum);
+//		 
 	 }
 	 
 	 public void practice8() {
@@ -166,28 +192,53 @@ public class ArrayPractice {
 //		 정수 : 5
 //		 1, 2, 3, 2, 1
 		 
-		 System.out.print("정수 : ");
-		 int num = sc.nextInt();
-		 int[] arr = new int [num];
-		 
-		 
-		 if(num % 2 == 1 && num > 3) {
-			 for(int i = 1; i < num; i++) {
-				 if((i*2)-num >= 1){
-					 System.out.print(i -1 +" ");
-				 }
-			}
-		 }else {
-			 System.out.println("다시 입력하세요.");
-			 practice8();
-		 }
-		 
-		 
-		 
-		 
-		 
-		 
+		System.out.print("정수 : ");
+		int size = sc.nextInt();
+
+		if(size < 3 || size % 2 == 0) {
+			System.out.println("다시 입력하세요.");
+			practice8();
+	 	}else {
+	 		int[] arr = new int [size]; // 5 -> 2
+	 		// 7 -> 3 -> 0,1,2,3,4,5,6 -> 7/2 ->3
+	 		// 9 -> 4 -> 0,1,2,3,4,5,6,7,8 -> 9/2 -> 4.5 ->4
+	 		for(int index =0; index <= size/2; index++) {
+	 			arr[index] = 1+index;
+	 		}
+	 		int value = 1;
+	 		for(int index = size/2+1; index < arr.length; index++) {
+	 			arr[index] =  size/2+1 - value;
+	 			value++;
+	 		}
+	 		
+	 		for(int i = 0; i < arr.length; i++) {
+	 			System.out.print(arr[i] + (i == arr.length-1 ? "" : ", "));
+	 		}
+	 	}
+
 	 }
 	 
+	 public void practice9() {
+//		 사용자가 입력한 값이 배열에 있는지 검색하여
+//		 있으면 “OOO 치킨 배달 가능“, 없으면 “OOO 치킨은 없는 메뉴입니다“를 출력하세요.
+//		 단, 치킨 메뉴가 들어가있는 배열은 본인 스스로 정하세요.
+//		 ex.
+//		 치킨 이름을 입력하세요 : 양념       치킨 이름을 입력하세요 : 불닭
+//		 양념치킨 배달 가능                불닭치킨은 없는 메뉴입니다.
+		 
+		 String [] menu = {"양념","후라이드","고추바사삭","레드콤보"};
+		 
+		 System.out.print("치킨 이름을 입력하세요 : ");
+		 String chiken = sc.nextLine();
+		 
+		 for(int i = 0; i < menu.length; i++) {
+			 if(menu[i].equals(chiken)) {
+				 System.out.println(chiken+"치킨 배달 가능");
+				 return;
+			 }	 
+		 }
+		 	System.out.println(chiken+"치킨은 없는 메뉴입니다.");
+	 }
+		 
 	
 }
