@@ -9,8 +9,8 @@ public class Student {
 	private char gender;
 	
 	{
-		grade = 1;
-		classroom = 1;
+		grade = 3;
+		classroom = 7;
 		name = "김진기";
 		height = 175.0;
 		gender = 'M';
@@ -22,5 +22,45 @@ public class Student {
 	public void setGrade(int grade) {
 		this.grade = grade;
 	}
-
+	
+	public void setClassroom(int classrooom) {
+		this.classroom = classroom;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public void setHeight(double heigth) {
+		this.height = height;
+	}
+	
+	public void setGender(char gender) {
+		this.gender = gender;
+	}
+	
+	public int grade() {
+		return grade;
+	}
+	
+	public int classroom() {
+		return classroom;
+	}
+	
+	public String name() {
+		return name;
+	}
+	
+	public double height() {
+		return height;
+	}
+	
+	public char gender() {
+		return gender;
+	}
+	
+	public void information() {
+		System.out.println("학년 : "+grade+"\n반 : "+classroom+"\n이름 : "+name+"\n키 : "+height+"\n성별 : "+gender);	
+	}
+	
 }
