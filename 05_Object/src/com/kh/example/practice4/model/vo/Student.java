@@ -23,7 +23,7 @@ public class Student {
 		this.grade = grade;
 	}
 	
-	public void setClassroom(int classrooom) {
+	public void setClassroom(int classroom) {
 		this.classroom = classroom;
 	}
 	
@@ -31,7 +31,7 @@ public class Student {
 		this.name = name;
 	}
 	
-	public void setHeight(double heigth) {
+	public void setHeight(double height) {
 		this.height = height;
 	}
 	
