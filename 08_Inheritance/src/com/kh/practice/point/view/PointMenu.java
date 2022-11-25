@@ -2,21 +2,19 @@ package com.kh.practice.point.view;
 
 import java.util.Scanner;
 
-import com.kh.practice.point.controller.*;
+import com.kh.practice.point.controller.CircleController;
+import com.kh.practice.point.controller.RectangleController;
 
 public class PointMenu {
-	
-	Scanner sc = new Scanner(System.in);
-	
-	CircleController cc = new CircleController();
-	
-	RectangleController rc = new RectangleController();
+	private Scanner sc = new Scanner(System.in);
+	private CircleController cc = new CircleController();
+	private RectangleController rc = new RectangleController();
 	
 	public void mainMenu() {
 		while(true) {
 			System.out.println("===== 메뉴 =====");
-			System.out.println("1. 원"); //cicleMenu();
-			System.out.println("2. 사각형"); //rectangleMenu();
+			System.out.println("1. 원"); // circleMenu();
+			System.out.println("2. 사각형");// rectangleMenu();
 			System.out.println("9. 끝내기");
 			System.out.print("메뉴 번호 : ");
 			int num = sc.nextInt();
@@ -24,18 +22,19 @@ public class PointMenu {
 			switch(num) {
 			case 1: circleMenu(); break;
 			case 2: rectangleMenu(); break;
-			case 9: System.out.println("종료합니다.");return;
-			default: System.out.println("잘못 입력했습니다. 다시 입력하세요.");
+			case 9: return;
+			default: System.out.println("잘못 입력했습니다. 다시입력해주세요");
 			}
 		}
 	}
+	
 	public void circleMenu() {
 		while(true) {
 			System.out.println("===== 원 메뉴 =====");
-			System.out.println("1. 원 둘레"); //calcCircum()
-			System.out.println("2. 원 넓이"); // calcCircleArea()
+			System.out.println("1. 원둘레"); // calcCircum()
+			System.out.println("2. 원 넓이");// calcCircleArea()
 			System.out.println("9. 메인으로");
-			System.out.print("메뉴 번호 : ");
+			System.out.print("메뉴번호 : ");
 			int num = sc.nextInt();
 			
 			switch(num) {
@@ -44,24 +43,25 @@ public class PointMenu {
 			case 9: 
 			default: return;
 			}
+			
 		}
 	}
 	
 	public void rectangleMenu() {
 		while(true) {
 			System.out.println("===== 메뉴 =====");
-			System.out.println("1. 사각형 둘레"); //calcPerimeter()
+			System.out.println("1. 사각형 둘레"); // calcPerimeter()
 			System.out.println("2. 사각형 넓이"); // calcReactArea()
-			System.out.println("9. 메인으로");
+			System.out.println("3. 메인으로");
 			System.out.print("메뉴 번호 : ");
 			int num = sc.nextInt();
-		
+			
 			switch(num) {
-			case 1: calcPerimeter(); break;
-			case 2: calcRectArea(); break;
-			case 3: 
+			case 1:calcPerimeter(); break; 
+			case 2:calcRectArea(); break;
+			case 3:
 			default: return;
-			}	
+			}
 		}
 	}
 	
@@ -73,11 +73,21 @@ public class PointMenu {
 		System.out.print("반지름 : ");
 		int radius = sc.nextInt();
 		
-		System.out.println(cc.calcCircum(x, y, radius));
-		
+		System.out.println( cc.calcCircum(x, y, radius) );
 	}
 	
 	public void calcCircleArea() {
+		System.out.print("x 좌표 : ");
+		int x = sc.nextInt();
+		System.out.print("y 좌표 : ");
+		int y = sc.nextInt();
+		System.out.print("반지름 : ");
+		int radius = sc.nextInt();
+		
+		System.out.println(cc.calcArea(x, y, radius));
+	}
+	
+	public void calcPerimeter() {
 		System.out.print("x 좌표 : ");
 		int x = sc.nextInt();
 		System.out.print("y 좌표 : ");
@@ -86,19 +96,8 @@ public class PointMenu {
 		int height = sc.nextInt();
 		System.out.print("너비 : ");
 		int width = sc.nextInt();
-	}
-	
-	public void calcPerimeter() {
-		System.out.print("x 좌표 : ");
 		
-		System.out.print("y 좌표 : ");
-		
-		System.out.print("높이 : ");
-		
-		System.out.print("너비 : ");
-		
-		
-		
+		System.out.println(rc.calcPerimeter(x, y, height, width));
 	}
 	
 	public void calcRectArea() {
@@ -113,4 +112,5 @@ public class PointMenu {
 		
 		System.out.println(rc.calcArea(x, y, height, width));
 	}
+	
 }
