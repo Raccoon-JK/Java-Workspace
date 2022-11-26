@@ -45,7 +45,7 @@ public class ArrayForeach {
 		
 		int sum = 0;
 		
-		for(Phone phone : phones) {
+		for(Phone phone : phones) {//Phone phone = phones[0] / Phone phone = phones[1] / Phone phone = phones[2]
 			System.out.println(phone.information());
 			sum += phone.getPrice();
 			
