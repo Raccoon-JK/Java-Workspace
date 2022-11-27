@@ -236,6 +236,234 @@ public class P2 {
 	}
 	
 	public void test14() {
+		System.out.print("1이상의 숫자를 입력하세요 : ");
+		int num = sc.nextInt();
+		
+		if(num >= 1) {
+			for(int i = 1; i <= num; i++) {
+				System.out.print(i+" ");
+			}						
+		}else {
+			System.out.println("1이상의 숫자를 입력해주세요.");
+			test14();
+		}
+	}
+	
+	public void test15() {
+		System.out.print("정수를 하나 입력하세요 : ");
+		int num = sc.nextInt();
+		
+		int sum = 0;
+		for(int i = 1; i <= num; i++) {
+			sum += i;
+			if(i < num) {
+				System.out.print(i+" + ");
+			}else {
+				System.out.print(i+" = "+sum);
+			}
+		}
+
+	}
+	
+	public void test16() {
+		
+		System.out.print("첫 번째 숫자 : ");
+		int num1 = sc.nextInt();
+		
+		System.out.print("두 번째 숫자 : ");
+		int num2 = sc.nextInt();
+		
+	
+		if(num1 < 1 || num2 < 1) {
+			System.out.println("1 이상의 숫자를 입력해주세요.");
+			test16();
+		}else if(num1 < num2) {
+			for(int i = num1; i <= num2; i++) {
+				System.out.print(i+" ");
+			}
+		}else {
+			for(int j = num2; j <= num1; j++) {
+				System.out.print(j+" ");
+			}		
+		}
+	}
+	
+	public void test17() {
+		System.out.print("숫자 : ");
+		int num = sc.nextInt();
+		
+		if(num > 9) {
+			System.out.println("9 이하의 숫자만 입력해주세요.");
+			test17();	
+		}else {
+			for(int j = num; j <= 9; j++) {
+				System.out.println("===== "+j+"단 =====");
+				for(int i = 1; i <= 9; i++) {
+					System.out.println(j+" * "+i+" = "+(j*i));
+				}				
+			}
+		}
+	}
+	
+	public void test18() {
+		System.out.print("시작 숫자 : ");
+		int num1 = sc.nextInt();
+		
+		System.out.print("공차 : ");
+		int num2 = sc.nextInt();
+		
+		for(int i = num1; i <= (num1+(num2*9)); i+=num2) {
+			System.out.print(i+" ");
+		}
+	}
+	
+	
+	public void test19() {
+		System.out.print("정수입력 : ");
+		int num = sc.nextInt();
+		
+		for(int i = 0; i < num; i++) {
+			for(int j = 0; j <= i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+				
+		
+	public void test20() {
+		System.out.print("정수입력 : ");
+		int num = sc.nextInt();
+		
+		for(int i = num; i > 0; i--) {
+			for(int j = 0; j < i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();		
+		}
+	}
+		
+//	public void test21() {
+//		System.out.print("정수입력 : ");
+//		int num = sc.nextInt();
+//		
+//		for(int i= num; i > 0; i--) {
+//			for(int j = 0; j < i; j++) {
+//				System.out.print("*");
+//			}
+//		System.out.println();
+//	}
+//			
+//}
+//	
+//	
+////	강사님 풀이
+////	System.out.print("정수 입력 : ");
+////	int star = sc.nextInt();
+//	
+////	for(int i = 0; i < star - i; i++) {
+////		for(int j = 1; j < star j++) {
+////		System.out.print(" ");
+////	}
+////		for(int j = 1; j < 2 + i; j++) {
+////		System.out.print("*");
+////	}
+////		System.out.println();
+////	}
+////	
+
+	
+	public void test22() {
+		int num[] = new int[10];
+		
+		for(int i = 0; i < num.length; i++) {
+			num[i] = i+1;
+			System.out.print(num[i]+" ");
+		}
+	}
+	
+	public void test23() {
+		int num[] = new int[10];
+		
+		for(int i = 9; i >= 0; i--) {
+			num[i] = i+1;
+			System.out.print(num[i]+" ");
+		}	
+	}
+	
+	public void test24() {
+		
+		System.out.println("양의 정수 : ");
+		int num = sc.nextInt();
+		
+		int arr[] = new int[num];
+		
+		for(int i = 0; i < arr.length; i++) {
+			arr[i] = i+1;
+			System.out.print(arr[i]+" ");
+		}
+	}
+	
+	
+	public void test25() {
+		String arr[] = {"사과", "귤", "포도", "복숭아","참외"};
+		System.out.println(arr[1]);
+	}
+	
+	public void test26() {
+		System.out.print("문자열 : ");
+		String str = sc.nextLine();
+		
+		System.out.print("문자 : ");
+		char ch = sc.nextLine().charAt(0);
+		
+		char arr[] = new char[str.length()]; 
+		
+		for(int i = 0; i < arr.length; i++) {
+			arr[i] = str.charAt(i);
+		}
+		int count = 0;
+		String index = "";
+		for(int i = 0; i< arr.length; i++) {
+			if(arr[i] == ch) {
+				index += i+" ";
+				count++;				
+			}
+		}
+		System.out.printf("%s에 %c가 존재하는 위치(인덱스) : %s \n",str, ch, index);
+		System.out.printf("%c에 개수 : %d",ch,count);
+	}
+	
+	public void test27() {
+		
+		System.out.print("0~6 사이 숫자 입력 : ");
+		int num = sc.nextInt();
+		
+		String str[] = {"월요일","화요일","수요일","목요일","금요일","토요일","일요일"};
+		
+		if(1 > num || 6 < num) {
+			System.out.println("잘못 입력하셨습니다.");
+		}else {
+			System.out.println(str[num]);			
+		}
+	}
+	
+	
+	public void test28() {
+		System.out.println("정수 : ");
+		int num = sc.nextInt();
+		
+		int arr[] = new int[num];
+		
+		for(int i = 0; i < num; i++) {
+			System.out.print("배열 "+i+"번째 인덱스에 넣을 값 : ");
+		}
+		
+		
+		
+		
+		
+		
 		
 		
 	}
@@ -250,5 +478,12 @@ public class P2 {
 	
 	
 	
-
+	
+	
+	
+	
+	
+	
+	
+	
 }
