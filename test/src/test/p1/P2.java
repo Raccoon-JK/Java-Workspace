@@ -5,6 +5,26 @@ import java.util.Scanner;
 public class P2 {
 	Scanner sc = new Scanner(System.in);
 	
+	public void test1() {
+		
+		System.out.print("이름을 입력하세요 : ");
+		String snum = sc.nextLine();
+		
+		System.out.print("성별을 입력하세요(남/여) : ");
+		char cnum = sc.nextLine().charAt(0);
+		
+		System.out.print("나이를 입력하세요 : ");
+		int inum = sc.nextInt();
+		
+		System.out.print("키를 입력하세요(cm) : ");
+		double dnum = sc.nextDouble();
+		
+		System.out.println("키 "+dnum+"cm인 "+inum+"살 "+cnum+"자 "+snum+"님 반값습니다^^");
+		System.out.printf("키 %.1fcm인 %d살 %s자 %s님 반갑습니다^^",dnum,inum,cnum,snum);
+		
+	}
+
+	
 	public void test2() {
 		
 		System.out.print("첫 번째 정수 : ");
@@ -450,34 +470,53 @@ public class P2 {
 	
 	
 	public void test28() {
-		System.out.println("정수 : ");
+		System.out.print("정수 : ");
 		int num = sc.nextInt();
 		
 		int arr[] = new int[num];
+		int sum = 0;
 		
 		for(int i = 0; i < num; i++) {
 			System.out.print("배열 "+i+"번째 인덱스에 넣을 값 : ");
+			arr[i] = sc.nextInt();
+			sum += arr[i];
+			}
+		 for(int i = 0; i < num; i++) {
+			 System.out.print(arr[i]+" ");
+		 }
+		 System.out.println("총합 : "+sum);
+	}
+			 
+	public void test29() {
+		System.out.print("정수 : ");
+		int num = sc.nextInt();
+		
+		int[] arr = new int[num];
+		
+		if(num % 2 != 1 || num < 3) {
+			System.out.println("다시 입력하세요");
+			test29();
+		}else {
+			for(int i = 0; i < num-2; i++) {
+				arr[i] = i + 1;
+				System.out.print(arr[i]+", ");
+			}
+			for(int i = num-2; i <= num-1; i++) {
+				arr[i] = num % i;
+				System.out.print(arr[i]+", ");	
+			}
+			
 		}
 		
 		
 		
 		
 		
-		
-		
-		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+			
+		
+		
+		
 	
 	
 	

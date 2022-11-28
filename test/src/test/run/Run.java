@@ -1,15 +1,13 @@
 package test.run;
 
 import test.p1.P2;
-import test.p1.Pone;
 
 public class Run {
 	
 	public static void main(String[] args) {
-//		Pone po = new Pone();
-//		po.test1();
-		
+
 		P2 p2 = new P2();
+//		p2.test1();
 //		p2.test2();
 //		p2.test3();
 //		p2.test4();
@@ -35,8 +33,8 @@ public class Run {
 //		p2.test25();
 //		p2.test26();
 //		p2.test27();
-		p2.test28();
-		
+//		p2.test28();
+		p2.test29();
 		
 		
 		
