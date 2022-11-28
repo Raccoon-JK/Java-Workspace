@@ -4,7 +4,7 @@ public interface NotePen {
 	
 	boolean PEN_BUTTON = true;
 	
-	public boolean bluetoothPen() { //블루투스펜 탑재여부
-	}
+	public boolean bluetoothPen(); //블루투스펜 탑재여부
+
 
 }

@@ -1,6 +1,6 @@
 package com.kh.practice.chap02_abstractNInterface.model.vo;
 
-public class V40 {
+public class V40 implements NotePen {
 
 	public V40() {
 		super();

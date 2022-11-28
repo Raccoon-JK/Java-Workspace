@@ -1,8 +1,10 @@
 package com.kh.practice.chap02_abstractNInterface.model.vo;
 
-public class GalaxyNote9 extends SmartPhone{
+public class GalaxyNote9 extends SmartPhone implements NotePen{
+
 	
 	public GalaxyNote9() {
+		super();
 	}
 	
 	public String makeCall() {
@@ -26,5 +28,11 @@ public class GalaxyNote9 extends SmartPhone{
 	public String printInformation() {
 		
 	}
+
+	@Override
+	public boolean bluetoothPen() {
+		return false;
+	}
+
 
 }

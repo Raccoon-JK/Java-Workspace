@@ -1,10 +1,8 @@
 package com.kh.practice.chap02_abstractNInterface.model.vo;
 
-public interface CellPhone {
+public interface CellPhone extends Phone, Camera{
 	
-	@Override
-	public String charge() {// 충전 방식
-		
-	}
+	public String charge();// 충전 방식
+	
 
 }
