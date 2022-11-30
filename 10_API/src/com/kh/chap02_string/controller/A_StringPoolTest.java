@@ -10,7 +10,7 @@ public class A_StringPoolTest {
 		String str1 = new String("hello");
 		String str2 = new String("hello");
 		
-		System.out.println(str1 == str2); // ㄹ false => 주소값 비교
+		System.out.println(str1 == str2); // false => 주소값 비교
 		System.out.println(str1);
 		System.out.println(str2.toString());
 		// String 클래스의 toString() 메소드의 경우 실제 담겨있는 문자열을 반환하도록 오버라이딩 되어있음.
