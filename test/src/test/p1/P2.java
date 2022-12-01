@@ -487,7 +487,7 @@ public class P2 {
 		 System.out.println("총합 : "+sum);
 	}
 			 
-	public void test29() {
+	public void test29() { // @@
 		System.out.print("정수 : ");
 		int num = sc.nextInt();
 		
@@ -508,15 +508,81 @@ public class P2 {
 			
 		}
 		
+	}
+		
+	
+	public void test30() {
+		System.out.print("치킨 이름을 입력하세요 : ");
+		String a = sc.nextLine();
+		
+		String [] str = {"불닭", "양념", "후라이드"};
+		
+		for(int i = 0; i < str.length; i++) {
+			if(str[i].equals(a)){
+				System.out.println(a+"치킨 배달 가능");
+				return;
+			}
+		}
+		System.out.println(a+"치킨은 없는 메뉴입니다." );
+	}
+			
+			
+	public void test31() {
+		int [][] arr = new int [3][3];
+		
+		for(int i = 0; i<arr.length; i++) {
+			for(int j = 0; j<arr[i].length; j++){
+				System.out.print("("+i+", "+j+")");
+			}
+			System.out.println();
+		}
+	}
+		
+		
+	public void test32() {
+		
+		int arr[][] = {{1,2,3,4} , {5,6,7,8} , {9,10,11,12} , {13,14,15,16}};
+		for(int i = 0; i < arr.length; i++) {
+			for(int j = 0; j < arr[i].length; j++) {
+				System.out.printf("%d ", arr[i][j]);	
+			}
+			System.out.println();
+		}
+	}
+		
+	public void test33() {
+		int arr[][] = {{16,15,14,13} , {12,11,10,9} , {8,7,6,5} , {4,3,2,1}};
+		for(int i = 0; i < arr.length; i++) {
+			for(int j = 0; j < arr[i].length; j++) {
+				System.out.printf("%d ", arr[i][j]);
+				
+			}
+			System.out.println();
+		}
+			
+	}
+	
+	public void test34() {
+		
+		int arr[][] = new int[4][4];
+		
+		
+		
+		
 		
 		
 		
 		
 	}
-			
-		
-		
-		
+	
+	
+	
+
+	
+	
+	
+	
+	
 	
 	
 	
@@ -526,3 +592,14 @@ public class P2 {
 	
 	
 }
+		
+		
+		
+	
+	
+
+	
+	
+	
+	
+	

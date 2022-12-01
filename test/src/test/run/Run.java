@@ -34,9 +34,11 @@ public class Run {
 //		p2.test26();
 //		p2.test27();
 //		p2.test28();
-		p2.test29();
-		
-		
+//		p2.test29();
+//		p2.test30();
+//		p2.test31();
+//		p2.test32();
+		p2.test33();
 		
 		
 		
