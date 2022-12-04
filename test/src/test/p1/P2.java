@@ -565,15 +565,69 @@ public class P2 {
 	public void test34() {
 		
 		int arr[][] = new int[4][4];
+		for(int i = 0; i < arr.length - 1; i++) { // 0, 1, 2, 3
+			for(int j = 0; j < arr[i].length - 1; j++) {
+				arr[i][j] = (int)(Math.random() *10 +1);
+				
+				arr[i][3] = arr[i][3] + arr[i][j]; //각 행의 모든값의 합
+				
+				arr[3][j] += arr[i][j]; //각 열의 모든값의 합
+				
+				arr[3][3] += arr[i][j] + arr[i][j]; //가로 세로의 총합
+			}
+		}
 		
-		
-		
-		
-		
-		
-		
+		printArray(arr);
+
 		
 	}
+	
+	public void printArray(int[][] arr) {
+		for(int i = 0; i < arr.length; i++) { // 0, 1, 2
+			for(int j = 0; j < arr[i].length; j++) { // 0, 1, 2
+				System.out.printf("%2d \t" , arr[i][j]);
+			}
+			System.out.println();
+		}
+	}	
+	
+	
+	public void test35() {
+//      2차원 배열의 행과 열의 크기를 사용자에게 직접 입력받되, 1~10사이 숫자가 아니면
+//      “반드시 1~10 사이의 정수를 입력해야 합니다.” 출력 후 다시 정수를 받게 하세요.
+//      크기가 정해진 이차원 배열 안에는 영어 대문자가 랜덤으로 들어가게 한 뒤 출력하세요.
+//      (char형은 숫자를 더해서 문자를 표현할 수 있고 65는 A를 나타냄)
+      // 알파벳 갯수 : 65 ~ (65+26)
+     
+		while(true) {
+			System.out.print("행 크기 : ");
+				int row = sc.nextInt();
+			System.out.print("열 크기 : ");
+				int col = sc.nextInt();
+      
+				if(!(row >=1 && row <= 10 && col >= 1 && col <= 10)) {
+					System.out.println("반드시 1~10사이의 정수를 입력하세요.");
+					continue;
+				}
+      
+				char[][] arr = new char[row][col];
+				for(int i = 0; i < arr.length; i++) { // 0 1 2
+					for(int j = 0; j < arr[i].length; j++) { // 0 1 2
+						arr[i][j] = (char)(int)(Math.random() * 26 + 65);
+					}
+				}
+				for(int i = 0; i < arr.length; i++) { // 0 1 2
+					for(int j = 0; j < arr[i].length; j++) { // 0 1 2
+						System.out.printf("%2c " , arr[i][j]);
+					}
+					System.out.println();
+				}
+				break;
+		}
+      
+	}
+		
+	
 	
 	
 	
