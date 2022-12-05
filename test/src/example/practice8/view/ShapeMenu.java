@@ -1,11 +1,12 @@
-package com.kh.hw.shape.view;
+package example.practice8.view;
 
 import java.util.Scanner;
 
-import com.kh.hw.shape.controller.SquareController;
-import com.kh.hw.shape.controller.TriangleController;
+import example.practice8.controller.SquareController;
+import example.practice8.controller.TriangleController;
 
 public class ShapeMenu {
+	
 	private Scanner sc = new Scanner(System.in);
 	private SquareController scr = new SquareController();
 	private TriangleController tc = new TriangleController();
@@ -122,16 +123,6 @@ public class ShapeMenu {
 		}
 		System.out.println(result);
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 }
