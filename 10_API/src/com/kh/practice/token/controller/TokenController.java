@@ -4,7 +4,9 @@ import java.util.StringTokenizer;
 
 public class TokenController {
 	
-	public void TokenController() {
+	public TokenController() {
+		
+	}
 		
 		public String afterToken(String str) {
 			// 매개변수로 받아온 str을 StringTokenizer를 이용하여
@@ -42,20 +44,19 @@ public class TokenController {
 			// 매개변수의 문자가 문자열 안에 몇 개가 들어가 있는지 반환
 			int count = 0;
 			// 방법 1.
-			for(int i = 0; i<input.length(); i++) {
-				//apple
-				input.charAt(i == one) // a p p l e
-				count++;
-			}
-		}
+//			for(int i = 0; i<input.length(); i++) {
+//				//apple
+//				input.charAt(i == one) // a p p l e
+//				count++;
+//			}
+//		}
 		// 방법 2. toCharArray 활용
 		char[] arr = input.toCharArray(); //apple -> {'a','p','p','l','e'}
 		for(char c : arr) {
 			if(c == one) {
 				count++;
 			}
-		}
-		return count;
+		}return count;
 		
 	}
 
