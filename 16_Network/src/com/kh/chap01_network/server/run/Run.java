@@ -15,7 +15,7 @@ public class Run {
 		 * - 서버에서 클라이언트의 요청을 응답하면 그 요청을 받을때까지 기다리는 클래스
 		 * - 사용법 : ServerSocket server = new ServerSocket(int portNumber);
 		 * - 메소드
-		 *  > Socket client = server.accept() 메소드를 통해 클라이언트의 연결을 기다리고 연결이 오면 Socket객체 로 반환.
+		 *  > Socket client = server.accept() 메소드를 통해 클라이언트의 연결을 기다리고 연결이 오면 Socket객체로 반환.
 		 *  
 		 *  Socket
 		 *  - 클라이언트에서 서버에 요청을 하거나, 서버에서 클라이언트의 요청을 받았을때 사용하는 클래스
